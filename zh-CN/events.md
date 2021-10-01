@@ -6,7 +6,7 @@
   - 鼠标点击
 - onCloned()
 - onCloned(data)
-  - 复制对象
+  - 克隆对象后的回调，方便重新初始化对象
 - onKey
 - onKey(key)
   - 按键

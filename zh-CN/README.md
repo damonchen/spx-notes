@@ -4,7 +4,6 @@
 
 `spx`通过工程目录下的`index.gmx`作为整个游戏的入口文件，里面有一个run方法，为整个游戏的入口开始。
 
-
 ## 代码结构
 
 代码组织结构一般为：一个`index.gmx`，若干个`spx`文件，以及一个按照规定的`resources`目录
@@ -101,7 +100,7 @@ run "hzip://open.qiniu.us/weather/res.zip", {Title: "Weather (by Go+)"}
 }
 ```
 
-`costume`对象:
+`costume`（造型）对象:
 
 - name：名称，string
 - path：图像路径，string
@@ -111,7 +110,9 @@ run "hzip://open.qiniu.us/weather/res.zip", {Title: "Weather (by Go+)"}
 
 `currentCostumeIndex`: 多个`costume`时的索引，从0开始计数
 
-`zorder`表示游戏中的对象（称为`Shape`)，`Shape`有两种，一种是`Sprite`，另一种是`stageMonitor`（通过json对象来定义）
+`zorder`表示游戏中的对象（称为`Shape`)，`Shape`有两种，一种是`Sprite`（精灵），另一种是`stageMonitor`（通过json对象来定义）
+
+一个精灵（sprite）有多个造型（costume），通过切换造型实习动态效果，比如走路，比如飞机被打爆。
 
 
 ## 支持的类型

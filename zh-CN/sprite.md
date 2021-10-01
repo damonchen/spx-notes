@@ -1,4 +1,4 @@
-# sprite
+# sprite（精灵）
 
 `sprite`对象是整个游戏中的核心，通过事件来串联sprite之间的关系
 
@@ -11,7 +11,7 @@
   - 鼠标点击
 - onCloned()
 - onCloned(data)
-  - 复制对象
+  - 克隆对象后的回调，方便重新初始化对象
 - onKey
 - onKey(key)
   - 按键

@@ -118,7 +118,7 @@ run "hzip://open.qiniu.us/weather/res.zip", {Title: "Weather (by Go+)"}
 
 主要分下面几种
 
-1. 内置简单类型
+1. 内置简单类型，如int,float32,int64, bool等等
 2. 全局的`Game`类型
 3. `Shape`类型，又细分为：
    1. `Sprite`对象

@@ -154,3 +154,32 @@ run "hzip://open.qiniu.us/weather/res.zip", {Title: "Weather (by Go+)"}
   "y": 0
 }
 ```
+
+## 内置的对象
+
+- Invalid
+  - 无效的对象
+- Last
+  - 最后一个对象
+- All
+  - 所有对象
+- Random
+  - 随机对象
+- Mouse
+  - 鼠标对象
+- Edge
+  - 边缘对象
+
+
+
+## 几个边缘方向
+
+touchingScreenLeft
+touchingScreenTop
+touchingScreenRight
+touchingScreenBottom
+touchingAllEdges
+
+## 游戏窗口
+
+整个游戏的默认窗口大小是 xxxx,

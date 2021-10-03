@@ -32,6 +32,9 @@
   - 表示显示该对象
 - destroy()
   - 销毁对象
+- clone()
+  - 复制对象，对象会收到onCloned的事件
+
 
 - costumeName()
   - 对象名称
@@ -75,6 +78,14 @@
   - 修改对象的尺寸delta
 
 
+- mouseX()
+- mouseY()
+  - 鼠标位置
+- mousePressed
+  - 鼠标按下
+- keyPressed(key)
+  - 按键按下
+
 - turnTo(obj)
   - 转向某个对象
 - turn(delta)
@@ -98,7 +109,7 @@
 - setPenColor(color)
   - 设置pen颜色
 - changePenColor(color)
-  - ?
+  - 修改pen颜色
 - setPenShade(shade)
 - changePenShade(shade)
 - setPenHue(hue)
@@ -110,8 +121,8 @@
 
 
 - touching
-  - 触发一个触摸动作
+  - 触发一个触摸动作，支持在sprite上触发以及mouse和edge上触发
+- bounceOffEdge
+  - 弹开边缘
 - stamp
-
-
 

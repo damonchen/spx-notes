@@ -37,11 +37,14 @@
 
 
 - costumeName()
-  - 对象名称
-- setCostumeName(name)
-  - 设置对象的名称
+  - 当前造型名称
+- costumeIndex()
+  - 当前造型编号
+- setCostume(name)
+- setCostume(index)
+  - 通过当前造型名称或编号切换当前造型
 - nextCostume()
-  - 下一个costume
+  - 切换到下一个造型
 
 - say(msg, sec):
   - 会在屏幕上打印一句话，sec秒后消失

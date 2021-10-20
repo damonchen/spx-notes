@@ -16,3 +16,15 @@
 - onScene
 - onScene(name)
   - 场景消息
+
+## 2021-10增加的事件
+
+- onMoving(func(MovingInfo))
+- onMoveing(func())
+  - 移动的事件
+  - MovingInfo:
+    - OldX
+    - OldY
+    - NewX
+    - NewY
+    - Obj 为移动的sprite对象

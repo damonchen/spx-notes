@@ -87,9 +87,14 @@
   - 按键按下
 
 - turnTo(obj)
-  - 转向某个对象
-- turn(delta)
-  - 偏转
+  - 转向某个对象, obj可以为方向，int，float64或者sprite
+- turn(val) （2021-10修改）
+  - 偏转, val可以为方向，或者int以及float64
+  - val的方向
+    - Left
+    - Right
+    - Up
+    - Down
 - heading()
   - 头部的方向
 - setRotationStyle(style)
@@ -120,9 +125,81 @@
   - 修改pen的尺寸
 
 
-- touching
+- touching(sprite, [animation])
+- touching(sprite)
+- touching(edge)
   - 触发一个触摸动作，支持在sprite上触发以及mouse和edge上触发
+  - 增加了animation（为字符串数组），即`setAnimation`中指定的animation（2021-10）
 - bounceOffEdge
   - 弹开边缘
 - stamp
+
+
+## 2021-10新增的接口
+
+- setAnimation(name, ani)
+  - 用来设置动画，用name来索引，ani是动画方法
+  - ani原型为：func(*Sprite)，即接受一个sprite对象参数
+- animate(name)
+  - 调用setAnimation设置的动画
+- animate(sec, costume, n)
+- animate(sec, costume, n, step)
+- animate(sec, costume, n, step, move)
+  - 动画方法，sec为动画帧之间的间隔时间，n表示总共有几帧，step为帧的跳跃间隔，move为移动步伐，和方向相关
+- cloned()
+  - 判定sprite是否为cloned
+- visible()
+  - 判定sprite是否可视
+- hideVar(name)
+  - 隐藏name对应的sprite
+- showVar(name)
+  - 显示name对应的sprite
+
+### 其他
+
+- 在`sprite`的`index.json`的`costumeSet`增加了`nx`的参数，用来指示图片中`sprite`的间隔。
+
+-  在`sprite`的`index.json`中增加了`costumeMPSet`对象，用来指示复杂图像下的sprite的图片获取方式
+
+其中一个示例如下：
+
+```
+ "costumeMPSet": {
+    "bitmapResolution": 1,
+    "path": "../common.png",
+    "parts": [
+      {
+        "rect": {
+          "x": 895,
+          "y": 2,
+          "w": 215,
+          "h": 46
+        },
+        "nx": 5
+      },
+      {
+        "rect": {
+          "x": 1110,
+          "y": 2,
+          "w": 120,
+          "h": 46
+        },
+        "nx": 2
+      },
+      {
+        "rect": {
+          "x": 1070,
+          "y": 2,
+          "w": 42,
+          "h": 46
+        },
+        "nx": 1
+      }
+    ]
+  },
+```
+
+图片为：
+
+![common](assets/common.png)
 

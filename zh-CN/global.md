@@ -53,3 +53,11 @@
   - 颜色
 - rgba(r,g,b,a)
   - 含透的颜色
+
+
+## 2021-10新增的接口
+
+- hideVar(name) (待疑)
+  - 隐藏name对应的sprite
+- showVar(name) (待疑)
+  - 显示name对应的sprite
